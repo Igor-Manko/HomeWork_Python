@@ -15,6 +15,7 @@ Config.set("graphics", "height", "300")
 class MainApp(App):
     def __init__(self):
         super().__init__()
+        self.buttons = None
         self.switch = True
 
     def tic_tac_toe(self, arg):
@@ -34,14 +35,14 @@ class MainApp(App):
 
         for item in coordinate:
             if vector(item).count('X') == 3 or vector(item).count('O') == 3:
-                win = True
+                # win = True
                 for i in item:
                     self.buttons[i].color = color
                 for button in self.buttons:
                     button.disabled = True
                 break
 
-    def restart(self, arg):
+    def restart(self, avg):
         self.switch = True
 
         for button in self.buttons:
