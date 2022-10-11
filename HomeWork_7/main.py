@@ -1,8 +1,7 @@
-
 keys = ['Last Name', 'Name', 'Number']
 
 
-def input_read(path):
+def input_read(path):  # чтение данных из файла input.txt
     f = open(path, 'r', encoding='UTF8')
     temp = f.read().split('\n')
     f.close()
@@ -16,7 +15,7 @@ def input_read(path):
     return lines
 
 
-def write_data(data, path):
+def write_data(data, path):  # перезапись из файла input в data
     f = open(path, 'w', encoding='UTF8')
     for line in data:
         temp = ''
