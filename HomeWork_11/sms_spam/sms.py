@@ -1,4 +1,4 @@
-class Person():
+class Person:
     def __init__(self, name, lastname, secondname, dict_phone):
         self.name = name
         self.lastname = lastname
@@ -6,7 +6,7 @@ class Person():
         self.dict_phone = dict_phone
 
     def get_phone(self):
-        return dict(self.dict_phone).get('private') # метод get -> None если нет номера
+        return dict(self.dict_phone).get('private')  # метод get -> None если нет номера
 
     def get_name(self):
         return self.name
@@ -58,7 +58,3 @@ company2 = Company('Cell', 'AO', {'non_contact': 222}, person2, person3)
 company3 = Company('Dell', 'Ltd', {'non_contact': 333}, person2, person4)
 
 send_sms(person1, person2, person3, person4, company1, company2, company3)
-
-
-
-
